@@ -6,7 +6,7 @@
     "version": "1.0.0",
     "description": ""
   },
-  "host": "web-service-cse-341.onrender.com",
+  "host": "web-service-cse-341-movies-plus.onrender.com",
   "basePath": "/",
   "schemes": [
     "https"
