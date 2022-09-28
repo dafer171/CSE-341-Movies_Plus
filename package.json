@@ -1,0 +1,47 @@
+{
+  "name": "cse-341",
+  "version": "1.0.0",
+  "description": "git hub node",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "dev_start": "nodemon server.js",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix",
+    "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc",
+    "swagger": "node ./swagger.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dafer171/CSE-341.git"
+  },
+  "author": "David Peña",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dafer171/CSE-341/issues"
+  },
+  "homepage": "https://github.com/dafer171/CSE-341#readme",
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.2",
+    "express": "^4.18.1",
+    "lint": "^1.1.2",
+    "mongodb": "^4.9.1",
+    "swagger-ui-express": "^4.5.0"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.38.0",
+    "@typescript-eslint/parser": "^5.38.0",
+    "eslint": "^8.23.1",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.31.8",
+    "eslint-plugin-vue": "^9.5.1",
+    "install": "^0.13.0",
+    "prettier": "^2.7.1",
+    "snpm": "^0.1.1",
+    "swagger-autogen": "^2.22.0"
+  }
+}
