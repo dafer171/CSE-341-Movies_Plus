@@ -19,7 +19,7 @@
         "responses": {}
       }
     },
-    "/contacts/": {
+    "/movies/": {
       "get": {
         "description": "",
         "produces": [
@@ -44,19 +44,19 @@
             "schema": {
               "type": "object",
               "properties": {
-                "firstName": {
+                "movieTitle": {
                   "example": "any"
                 },
-                "lastName": {
+                "movieAuhorName": {
                   "example": "any"
                 },
-                "email": {
+                "movieAuhorLastName": {
                   "example": "any"
                 },
-                "favoriteColor": {
+                "movieGenre": {
                   "example": "any"
                 },
-                "birthday": {
+                "movieYear": {
                   "example": "any"
                 }
               }
@@ -73,7 +73,7 @@
         }
       }
     },
-    "/contacts/{id}": {
+    "/movies/{id}": {
       "get": {
         "description": "",
         "produces": [
@@ -111,19 +111,19 @@
             "schema": {
               "type": "object",
               "properties": {
-                "firstName": {
+                "movieTitle": {
                   "example": "any"
                 },
-                "lastName": {
+                "movieAuhorName": {
                   "example": "any"
                 },
-                "email": {
+                "movieAuhorLastName": {
                   "example": "any"
                 },
-                "favoriteColor": {
+                "movieGenre": {
                   "example": "any"
                 },
-                "birthday": {
+                "movieYear": {
                   "example": "any"
                 }
               }
