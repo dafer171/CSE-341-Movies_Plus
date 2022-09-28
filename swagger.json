@@ -2,7 +2,7 @@
   "swagger": "2.0",
   "info": {
     "title": "My API",
-    "desciption": "Contact API",
+    "desciption": "Movie API",
     "version": "1.0.0",
     "description": ""
   },

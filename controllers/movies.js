@@ -3,7 +3,7 @@ const ObjectId = require('mongodb').ObjectId;
 
 const getAll = async (req, res) => {
   try {
-    const result = await mongodb.getDb().db().collection('contacts').find();
+    const result = await mongodb.getDb().db().collection('movies').find();
     result.toArray().then((lists) => {
       res.setHeader('Content-Type', 'application/json');
       res.status(200).json(lists);
@@ -15,8 +15,8 @@ const getAll = async (req, res) => {
 
 const getSingle = async (req, res) => {
   try {
-    const userId = new ObjectId(req.params.id);
-    const result = await mongodb.getDb().db().collection('contacts').find({ _id: userId });
+    const moviesId = new ObjectId(req.params.id);
+    const result = await mongodb.getDb().db().collection('movies').find({ _id: moviesId });
     result.toArray().then((lists) => {
       res.setHeader('Content-Type', 'application/json');
       res.status(200).json(lists[0]);
@@ -26,16 +26,16 @@ const getSingle = async (req, res) => {
   }
 };
 
-const createContact = async (req, res) => {
+const createMovie = async (req, res) => {
   try {
-    const contact = {
-      firstName: req.body.firstName,
-      lastName: req.body.lastName,
-      email: req.body.email,
-      favoriteColor: req.body.favoriteColor,
-      birthday: req.body.birthday
+    const movie = {
+      movieTitle: req.body.movieTitle,
+      movieAuhorName: req.body.movieAuhorName,
+      movieAuhorLastName: req.body.movieAuhorLastName,
+      movieGenre: req.body.movieGenre,
+      movieYear: req.body.movieYear
     };
-    const response = await mongodb.getDb().db().collection('contacts').insertOne(contact);
+    const response = await mongodb.getDb().db().collection('movies').insertOne(movie);
     if (response.acknowledged) {
       res.status(201).json(response);
     } else {
@@ -46,46 +46,46 @@ const createContact = async (req, res) => {
   }
 };
 
-const updateContact = async (req, res) => {
+const updateMovie = async (req, res) => {
   try {
-    const userId = new ObjectId(req.params.id);
+    const moviesId = new ObjectId(req.params.id);
     // be aware of updateOne if you only want to update specific fields
-    const contact = {
-      firstName: req.body.firstName,
-      lastName: req.body.lastName,
-      email: req.body.email,
-      favoriteColor: req.body.favoriteColor,
-      birthday: req.body.birthday
+    const movie = {
+      movieTitle: req.body.movieTitle,
+      movieAuhorName: req.body.movieAuhorName,
+      movieAuhorLastName: req.body.movieAuhorLastName,
+      movieGenre: req.body.movieGenre,
+      movieYear: req.body.movieYear
     };
     const response = await mongodb
       .getDb()
       .db()
-      .collection('contacts')
-      .replaceOne({ _id: userId }, contact);
+      .collection('movies')
+      .replaceOne({ _id: moviesId }, movie);
     console.log(response);
     if (response.modifiedCount > 0) {
       res.status(204).send();
     } else {
-      res.status(500).json(response.error || 'Some error occurred while updating the contact.');
+      res.status(500).json(response.error || 'Some error occurred while updating the movie.');
     }
   } catch (err) {
     res.status(500).json({ message: err.message });
   }
 };
 
-const deleteContact = async (req, res) => {
+const deleteMovie = async (req, res) => {
   try {
-    const userId = new ObjectId(req.params.id);
+    const moviesId = new ObjectId(req.params.id);
     const response = await mongodb
       .getDb()
       .db()
-      .collection('contacts')
-      .remove({ _id: userId }, true);
+      .collection('movies')
+      .remove({ _id: moviesId }, true);
     console.log(response);
     if (response.deletedCount > 0) {
       res.status(204).send();
     } else {
-      res.status(500).json(response.error || 'Some error occurred while deleting the contact.');
+      res.status(500).json(response.error || 'Some error occurred while deleting the movie.');
     }
   } catch (err) {
     res.status(500).json({ message: err.message });
@@ -95,7 +95,7 @@ const deleteContact = async (req, res) => {
 module.exports = {
   getAll,
   getSingle,
-  createContact,
-  updateContact,
-  deleteContact
+  createMovie,
+  updateMovie,
+  deleteMovie
 };

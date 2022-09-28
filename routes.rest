@@ -1,68 +1,68 @@
 // LOCALHOST 
 
-### Get all the contacts
-GET http://localhost:8080/contacts 
+### Get all the movies
+GET http://localhost:8080/movies 
 
-### Get contacts by ID
-GET http://localhost:8080/contacts/632cb07ae4c970f823ee6f5e
+### Get movies by ID
+GET http://localhost:8080/movies/633487e1bbb0af0db7454cb4
 ### 
-GET http://localhost:8080/contacts/632cb07ae4c970f823ee6f5f 
+GET http://localhost:8080/movies/633487e1bbb0af0db7454cb5 
 ### 
-GET http://localhost:8080/contacts/632cb07ae4c970f823ee6f60
+GET http://localhost:8080/movies/633487e1bbb0af0db7454cb6
 
-### Create contact 
-POST http://localhost:8080/contacts HTTP/1.1
+### Create Movie 
+POST http://localhost:8080/movies HTTP/1.1
 content-type: application/json
 
 {
-"firstName":"Jose", 
-"lastName":"Andrade", 
-"email":"jose@hotmail.com", 
-"favoriteColor":"Blue", 
-"birthday":"05/11/2000"
+"movieTitle":"Saving Private Ryan", 
+"movieAuhorName":"Steven", 
+"movieAuhorLastName":"Spielberg", 
+"movieGenre":"War", 
+"movieYear":"1998"
 }
 
-### PUT contact 
-PUT http://localhost:8080/contacts/632cb35bafdea2dbc8b741cc HTTP/1.1
+### PUT movies 
+PUT http://localhost:8080/movies/633487e1bbb0af0db7454cb4 HTTP/1.1
 content-type: application/json
 
 {
-"firstName":"Azahara", 
-"lastName":"Soler", 
-"email":"azahara@gmail.com", 
-"favoriteColor":"Red", 
-"birthday":"30/12/1991"
+"movieTitle":"Troy", 
+"movieAuhorName":"Wolfgang", 
+"movieAuhorLastName":"Petersen", 
+"movieGenre":"Epic", 
+"movieYear":"2004"
 }
 
-### DELETE contact
-DELETE http://localhost:8080/contacts/632cb35bafdea2dbc8b741cc HTTP/1.1
+### DELETE movies
+DELETE http://localhost:8080/movies/63348ecdfd225624b0616b02 HTTP/1.1
 
 
 // PRODUCTION Deploy 
-### Get all the contacts
-GET https://web-service-cse-341.onrender.com/contacts
+### Get all the movies
+GET https://web-service-cse-341.onrender.com/movies
 
-### Get contacts by ID
-GET https://web-service-cse-341.onrender.com/contacts/632cb07ae4c970f823ee6f5e
+### Get movies by ID
+GET https://web-service-cse-341.onrender.com/movies/632cb07ae4c970f823ee6f5e
 ### 
-GET https://web-service-cse-341.onrender.com/contacts/632cb07ae4c970f823ee6f5f
+GET https://web-service-cse-341.onrender.com/movies/632cb07ae4c970f823ee6f5f
 ### 
-GET https://web-service-cse-341.onrender.com/contacts/632cb07ae4c970f823ee6f60
+GET https://web-service-cse-341.onrender.com/movies/632cb07ae4c970f823ee6f60
 
-### Create contact
-POST https://web-service-cse-341.onrender.com/contacts HTTP/1.1
+### Create movie
+POST https://web-service-cse-341.onrender.com/movies HTTP/1.1
 content-type: application/json
 
 {
-"firstName":"Jose", 
-"lastName":"Andrade", 
-"email":"jose@hotmail.com", 
-"favoriteColor":"Blue", 
-"birthday":"05/11/2000"
+"movieTitle":"Gladiator", 
+"movieAuhorName":"Ridley", 
+"movieAuhorLastName":"Scott", 
+"movieGenre":"Clasicc", 
+"movieYear":"2000"
 }
 
-### PUT contact
-PUT https://web-service-cse-341.onrender.com/contacts/632cb07ae4c970f823ee6f5f HTTP/1.1
+### PUT movies
+PUT https://web-service-cse-341.onrender.com/movies/632cb07ae4c970f823ee6f5f HTTP/1.1
 content-type: application/json
 
 {
@@ -73,5 +73,5 @@ content-type: application/json
 "birthday":"30/12/1991"
 }
 
-### DELETE contact
-DELETE https://web-service-cse-341.onrender.com/contacts/632f52e8ff1d3c65c218cccb HTTP/1.1
+### DELETE movies
+DELETE https://web-service-cse-341.onrender.com/movies/632f52e8ff1d3c65c218cccb HTTP/1.1

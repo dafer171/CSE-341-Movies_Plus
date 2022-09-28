@@ -1,0 +1,23 @@
+{
+    "movie" : {
+        "movieTitle":"Gladiator", 
+        "movieAuhorName":"Ridley", 
+        "movieAuhorLastName":"Scott", 
+        "movieGenre":"Clasicc", 
+        "movieYear":"2000"
+        },
+    "movie2" : {
+        "movieTitle":"The Bourne Identity", 
+        "movieAuhorName":"Doug", 
+        "movieAuhorLastName":"Liman", 
+        "movieGenre":"Action", 
+        "movieYear":"2002"
+        },
+    "movie3" : {
+        "movieTitle":"Troy", 
+        "movieAuhorName":"Wolfgang", 
+        "movieAuhorLastName":"Petersen", 
+        "movieGenre":"Epic", 
+        "movieYear":"2004"
+        }
+}
