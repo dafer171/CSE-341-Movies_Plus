@@ -1,5 +1,5 @@
 {
-  "name": "cse-341",
+  "name": "cse-341-Movies_Plus",
   "version": "1.0.0",
   "description": "git hub node",
   "main": "server.js",
@@ -14,14 +14,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dafer171/CSE-341.git"
+    "url": "git+https://github.com/dafer171/CSE-341-Movies_Plus.git"
   },
   "author": "David Peña",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/dafer171/CSE-341/issues"
+    "url": "https://github.com/dafer171/CSE-341-Movies_Plus/issues"
   },
-  "homepage": "https://github.com/dafer171/CSE-341#readme",
+  "homepage": "https://github.com/dafer171/CSE-341-Movies_Plus#readme",
   "dependencies": {
     "body-parser": "^1.20.0",
     "cors": "^2.8.5",
