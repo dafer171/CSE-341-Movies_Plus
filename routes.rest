@@ -40,29 +40,29 @@ DELETE http://localhost:8080/movies/63348ecdfd225624b0616b02 HTTP/1.1
 
 // PRODUCTION Deploy 
 ### Get all the movies
-GET https://web-service-cse-341.onrender.com/movies
+GET https://web-service-cse-341-movies-plus.onrender.com/movies
 
 ### Get movies by ID
-GET https://web-service-cse-341.onrender.com/movies/632cb07ae4c970f823ee6f5e
+GET https://web-service-cse-341-movies-plus.onrender.com/movies/633487e1bbb0af0db7454cb4
 ### 
-GET https://web-service-cse-341.onrender.com/movies/632cb07ae4c970f823ee6f5f
+GET https://web-service-cse-341-movies-plus.onrender.com/movies/633487e1bbb0af0db7454cb5
 ### 
-GET https://web-service-cse-341.onrender.com/movies/632cb07ae4c970f823ee6f60
+GET https://web-service-cse-341-movies-plus.onrender.com/movies/633487e1bbb0af0db7454cb6
 
 ### Create movie
-POST https://web-service-cse-341.onrender.com/movies HTTP/1.1
+POST https://web-service-cse-341-movies-plus.onrender.com/movies HTTP/1.1
 content-type: application/json
 
 {
-"movieTitle":"Gladiator", 
-"movieAuhorName":"Ridley", 
-"movieAuhorLastName":"Scott", 
-"movieGenre":"Clasicc", 
-"movieYear":"2000"
+"movieTitle":"Saving Private Ryan", 
+"movieAuhorName":"Steven", 
+"movieAuhorLastName":"Spielberg", 
+"movieGenre":"War", 
+"movieYear":"1998"
 }
 
 ### PUT movies
-PUT https://web-service-cse-341.onrender.com/movies/632cb07ae4c970f823ee6f5f HTTP/1.1
+PUT https://web-service-cse-341-movies-plus.onrender.com/movies/632cb07ae4c970f823ee6f5f HTTP/1.1
 content-type: application/json
 
 {
@@ -74,4 +74,4 @@ content-type: application/json
 }
 
 ### DELETE movies
-DELETE https://web-service-cse-341.onrender.com/movies/632f52e8ff1d3c65c218cccb HTTP/1.1
+DELETE https://web-service-cse-341-movies-plus.onrender.com/movies/632f52e8ff1d3c65c218cccb HTTP/1.1
