@@ -1,29 +1,38 @@
 const mongodb = require('../db/connect');
 const ObjectId = require('mongodb').ObjectId;
 
-const getAll = async (req, res) => {
-  try {
-    const result = await mongodb.getDb().db().collection('movies').find();
-    result.toArray().then((lists) => {
+const getAll = (req, res) => {
+  mongodb
+    .getDb()
+    .db()
+    .collection('movies')
+    .find()
+    .toArray((err, lists) => {
+      if (err) {
+        res.status(400).json({ message: err });
+      }
       res.setHeader('Content-Type', 'application/json');
       res.status(200).json(lists);
     });
-  } catch (err) {
-    res.status(500).json({ message: err.message });
-  }
 };
 
-const getSingle = async (req, res) => {
-  try {
-    const moviesId = new ObjectId(req.params.id);
-    const result = await mongodb.getDb().db().collection('movies').find({ _id: moviesId });
-    result.toArray().then((lists) => {
-      res.setHeader('Content-Type', 'application/json');
-      res.status(200).json(lists[0]);
-    });
-  } catch (err) {
-    res.status(500).json({ message: err.message });
+const getSingle = (req, res) => {
+  if (!ObjectId.isValid(req.params.id)) {
+    res.status(400).json('Must use a valid movie id to find a movie.');
   }
+  const userId = new ObjectId(req.params.id);
+  mongodb
+    .getDb()
+    .db()
+    .collection('movie')
+    .find({ _id: userId })
+    .toArray((err, result) => {
+      if (err) {
+        res.status(400).json({ message: err });
+      }
+      res.setHeader('Content-Type', 'application/json');
+      res.status(200).json(result[0]);
+    });
 };
 
 const createMovie = async (req, res) => {
@@ -39,7 +48,7 @@ const createMovie = async (req, res) => {
     if (response.acknowledged) {
       res.status(201).json(response);
     } else {
-      res.status(500).json(response.error || 'Some error occurred while creating the contact.');
+      res.status(500).json(response.error || 'Some error occurred while creating the movie.');
     }
   } catch (err) {
     res.status(500).json({ message: err.message });
