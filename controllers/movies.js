@@ -37,6 +37,17 @@ const getSingle = (req, res) => {
 
 const createMovie = async (req, res) => {
   try {
+    if (
+      !req.body.movieTitle ||
+      !req.body.movieAuhorName ||
+      !req.body.movieAuhorLastName ||
+      !req.body.movieGenre ||
+      !req.body.movieYear
+    ) {
+      res.status(400).send({ message: 'Content can not be empty!' });
+      return;
+    }
+
     const movie = {
       movieTitle: req.body.movieTitle,
       movieAuhorName: req.body.movieAuhorName,
