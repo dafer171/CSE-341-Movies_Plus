@@ -3,7 +3,7 @@ const cors = require('cors');
 const bodyParser = require('body-parser');
 const mongodb = require('./db/connect');
 
-const { auth } = require('express-openid-connect');
+const { auth, requiresAuth } = require('express-openid-connect');
 require('dotenv').config();
 
 const port = process.env.PORT || 8080;
@@ -49,6 +49,10 @@ app
 
 process.on('uncaughtException', (err, origin) => {
   console.log(process.stderr.fd, `Caught exception: ${err}\n` + `Exception origin: ${origin}`);
+});
+
+app.get('/profile', requiresAuth(), (req, res) => {
+  res.send(JSON.stringify(req.oidc.user));
 });
 
 mongodb.initDb((err) => {
