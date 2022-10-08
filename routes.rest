@@ -75,3 +75,43 @@ content-type: application/json
 
 ### DELETE movies
 DELETE https://web-service-cse-341-movies-plus.onrender.com/movies/632f52e8ff1d3c65c218cccb HTTP/1.1
+
+
+
+### Get all the users
+GET https://web-service-cse-341-movies-plus.onrender.com/users
+
+### Get users by ID
+GET https://web-service-cse-341-movies-plus.onrender.com/movies/633487e1bbb0af0db7454cb4
+### 
+GET https://web-service-cse-341-movies-plus.onrender.com/movies/633487e1bbb0af0db7454cb5
+### 
+GET https://web-service-cse-341-movies-plus.onrender.com/movies/633487e1bbb0af0db7454cb6
+
+### Create user
+POST https://web-service-cse-341-movies-plus.onrender.com/users HTTP/1.1
+content-type: application/json
+
+{
+"nickname":"Saving Private Ryan", 
+"nickname":"Steven", 
+"userLastName":"Spielberg", 
+"movieGenre":"War", 
+"password":"1998"
+}
+
+### PUT movies
+PUT https://web-service-cse-341-movies-plus.onrender.com/users/632cb07ae4c970f823ee6f5f HTTP/1.1
+content-type: application/json
+
+{
+"nickname":"Saving Private Ryan", 
+"nickname":"Steven", 
+"userLastName":"Spielberg", 
+"movieGenre":"War", 
+"password":"1998"
+}
+
+### DELETE movies
+DELETE https://web-service-cse-341-movies-plus.onrender.com/users/632f52e8ff1d3c65c218cccb HTTP/1.1
+
