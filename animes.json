@@ -1,0 +1,11 @@
+{
+    "anime" : {
+        "animeTitle":"Naruto", 
+        "animeAuhorName":"Masashi", 
+        "animeAuhorLastName":"Kishimoto", 
+        "animeGenre":"Action", 
+        "animeYear":"1999",
+        "watched":"Yes",
+        "opinion":"No opinion yet"
+        }
+}
