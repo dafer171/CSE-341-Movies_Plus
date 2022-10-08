@@ -73,7 +73,7 @@ const updateUser = async (req, res) => {
       .getDb()
       .db()
       .collection('users')
-      .replaceOne({ _id: usersId }, movie);
+      .replaceOne({ _id: usersId }, user);
     console.log(response);
     if (response.modifiedCount > 0) {
       res.status(204).send();
