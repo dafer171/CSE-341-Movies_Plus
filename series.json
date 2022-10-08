@@ -17,13 +17,13 @@
         "watched":"No",
         "opinion":"No opinion yet"
         },
-    "movie3" : {
-        "serieTitle":"Lost", 
-        "serieAuhorName":"Jeffrey Jacob", 
-        "serieAuhorLastName":"Abrams", 
-        "serieGenre":"Sciencie Fiction", 
-        "serieYear":"2004",
-        "watched":"No",
-        "opinion":"No opinion yet"
+    "serie3" : {
+        "serieTitle":"Games of thrones", 
+        "serieAuhorName":"David", 
+        "serieAuhorLastName":"Beioff", 
+        "serieGenre":"Drama", 
+        "serieYear":"2011",
+        "watched":"Yes",
+        "opinion":"Serie worhty to wath again"
         }
 }

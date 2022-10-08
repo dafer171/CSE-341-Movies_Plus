@@ -8,10 +8,10 @@ router.get('/', seriesController.getAll);
 
 router.get('/:id', seriesController.getSingle);
 
-router.post('/', seriesController.createMovie);
+router.post('/', seriesController.createSerie);
 
-router.put('/:id', seriesController.updateMovie);
+router.put('/:id', seriesController.updateSerie);
 
-router.delete('/:id', seriesController.deleteMovie);
+router.delete('/:id', seriesController.deleteSerie);
 
 module.exports = router;

@@ -18,7 +18,7 @@ const getAll = (req, res) => {
 
 const getSingle = (req, res) => {
   if (!ObjectId.isValid(req.params.id)) {
-    res.status(400).json('Must use a valid movie id to find a serie.');
+    res.status(400).json('Must use a valid serie id to find a serie.');
   }
   const serieId = new ObjectId(req.params.id);
   mongodb
@@ -51,63 +51,67 @@ const createSerie = async (req, res) => {
     }
 
     const serie = {
-      movieTitle: req.body.movieTitle,
-      movieAuhorName: req.body.movieAuhorName,
-      movieAuhorLastName: req.body.movieAuhorLastName,
-      movieGenre: req.body.movieGenre,
-      movieYear: req.body.movieYear
+      serieTitle: req.body.serieTitle,
+      serieAuhorName: req.body.serieAuhorName,
+      serieAuhorLastName: req.body.serieAuhorLastName,
+      serieGenre: req.body.serieGenre,
+      serieYear: req.body.serieYear,
+      watched: req.body.watched,
+      opinion: req.body.opinion
     };
-    const response = await mongodb.getDb().db().collection('movies').insertOne(movie);
+    const response = await mongodb.getDb().db().collection('series').insertOne(serie);
     if (response.acknowledged) {
       res.status(201).json(response);
     } else {
-      res.status(500).json(response.error || 'Some error occurred while creating the movie.');
+      res.status(500).json(response.error || 'Some error occurred while creating the serie.');
     }
   } catch (err) {
     res.status(500).json({ message: err.message });
   }
 };
 
-const updateMovie = async (req, res) => {
+const updateSerie = async (req, res) => {
   try {
-    const moviesId = new ObjectId(req.params.id);
+    const seriesId = new ObjectId(req.params.id);
     // be aware of updateOne if you only want to update specific fields
-    const movie = {
-      movieTitle: req.body.movieTitle,
-      movieAuhorName: req.body.movieAuhorName,
-      movieAuhorLastName: req.body.movieAuhorLastName,
-      movieGenre: req.body.movieGenre,
-      movieYear: req.body.movieYear
+    const serie = {
+      serieTitle: req.body.serieTitle,
+      serieAuhorName: req.body.serieAuhorName,
+      serieAuhorLastName: req.body.serieAuhorLastName,
+      serieGenre: req.body.serieGenre,
+      serieYear: req.body.serieYear,
+      watched: req.body.watched,
+      opinion: req.body.opinion
     };
     const response = await mongodb
       .getDb()
       .db()
-      .collection('movies')
-      .replaceOne({ _id: moviesId }, movie);
+      .collection('series')
+      .replaceOne({ _id: seriessId }, serie);
     console.log(response);
     if (response.modifiedCount > 0) {
       res.status(204).send();
     } else {
-      res.status(500).json(response.error || 'Some error occurred while updating the movie.');
+      res.status(500).json(response.error || 'Some error occurred while updating the serie.');
     }
   } catch (err) {
     res.status(500).json({ message: err.message });
   }
 };
 
-const deleteMovie = async (req, res) => {
+const deleteSerie = async (req, res) => {
   try {
-    const moviesId = new ObjectId(req.params.id);
+    const seriesId = new ObjectId(req.params.id);
     const response = await mongodb
       .getDb()
       .db()
-      .collection('movies')
-      .remove({ _id: moviesId }, true);
+      .collection('series')
+      .remove({ _id: seriesId }, true);
     console.log(response);
     if (response.deletedCount > 0) {
       res.status(204).send();
     } else {
-      res.status(500).json(response.error || 'Some error occurred while deleting the movie.');
+      res.status(500).json(response.error || 'Some error occurred while deleting the serie.');
     }
   } catch (err) {
     res.status(500).json({ message: err.message });
@@ -117,7 +121,7 @@ const deleteMovie = async (req, res) => {
 module.exports = {
   getAll,
   getSingle,
-  createMovie,
-  updateMovie,
-  deleteMovie
+  createSerie,
+  updateSerie,
+  deleteSerie
 };
