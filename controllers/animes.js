@@ -24,7 +24,7 @@ const getSingle = (req, res) => {
   mongodb
     .getDb()
     .db()
-    .collection('anime')
+    .collection('animes')
     .find({ _id: animeId })
     .toArray((err, result) => {
       if (err) {

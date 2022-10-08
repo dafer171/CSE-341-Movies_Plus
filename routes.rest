@@ -156,3 +156,45 @@ content-type: application/json
 ### DELETE 
 DELETE https://web-service-cse-341-movies-plus.onrender.com/series/6341f15049cdf251bbe5267b HTTP/1.1
 
+
+### Get all the animes
+GET https://web-service-cse-341-movies-plus.onrender.com/animes
+
+### Get animes by ID
+GET https://web-service-cse-341-movies-plus.onrender.com/animes/633487e1bbb0af0db7454cb4
+### 
+GET https://web-service-cse-341-movies-plus.onrender.com/animes/633487e1bbb0af0db7454cb5
+### 
+GET https://web-service-cse-341-movies-plus.onrender.com/animes/633487e1bbb0af0db7454cb6
+
+### Create anime
+POST https://web-service-cse-341-movies-plus.onrender.com/animes HTTP/1.1
+content-type: application/json
+
+{
+"animeTitle":"DBZ", 
+"animeAuhorName":"Akira", 
+"animeAuhorLastName":"Toriyama", 
+"animeGenre":"Fantasy", 
+"animesYear":"1984",
+"watched":"Yes",
+"opinion":"Anime worhty to wath again"
+}
+
+### PUT animes
+PUT https://web-service-cse-341-movies-plus.onrender.com/animes/632cb07ae4c970f823ee6f5f HTTP/1.1
+content-type: application/json
+
+{
+"animeTitle":"DBZ", 
+"animeAuhorName":"Akira", 
+"animeAuhorLastName":"Toriyama", 
+"animeGenre":"Fantasy", 
+"animesYear":"1984",
+"watched":"Yes",
+"opinion":"Anime worhty to wath again"
+}
+
+### DELETE 
+DELETE https://web-service-cse-341-movies-plus.onrender.com/animes/6341f15049cdf251bbe5267b HTTP/1.1
+
