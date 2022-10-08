@@ -4,20 +4,26 @@
         "movieAuhorName":"Ridley", 
         "movieAuhorLastName":"Scott", 
         "movieGenre":"Clasicc", 
-        "movieYear":"2000"
+        "movieYear":"2000",
+        "watched":"Yes",
+        "opinion":"Great movie, worthy to watch again"
         },
     "movie2" : {
         "movieTitle":"The Bourne Identity", 
         "movieAuhorName":"Doug", 
         "movieAuhorLastName":"Liman", 
         "movieGenre":"Action", 
-        "movieYear":"2002"
+        "movieYear":"2002",
+        "watched":"Yes",
+        "opinion":"Great movie, worthy to watch again"
         },
     "movie3" : {
         "movieTitle":"Troy", 
         "movieAuhorName":"Wolfgang", 
         "movieAuhorLastName":"Petersen", 
         "movieGenre":"Epic", 
-        "movieYear":"2004"
+        "movieYear":"2004",
+        "watched":"Yes",
+        "opinion":"Great movie, worthy to watch again"
         }
 }

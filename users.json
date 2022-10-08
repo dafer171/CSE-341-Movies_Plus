@@ -1,0 +1,20 @@
+{
+    "user" : {
+        "nickname":"Gladiator", 
+        "userName":"Ridley", 
+        "userLastName":"Scott", 
+        "password":"Clasicc"
+        },
+    "user2" : {
+        "nickname":"Bourne", 
+        "userName":"Doug", 
+        "userLastName":"Liman", 
+        "password":"Action"
+        },
+    "user3" : {
+        "nickname":"Troy", 
+        "userName":"Wolfgang", 
+        "userLastName":"Petersen", 
+        "password":"Epic"
+        }
+}
