@@ -28,6 +28,7 @@
     "dotenv": "^16.0.3",
     "express": "^4.18.1",
     "express-openid-connect": "^2.8.0",
+    "graphql": "^16.6.0",
     "lint": "^1.1.2",
     "mongodb": "^4.10.0",
     "nodemon": "^2.0.20",

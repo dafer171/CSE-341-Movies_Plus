@@ -176,7 +176,7 @@ content-type: application/json
 "animeAuhorName":"Akira", 
 "animeAuhorLastName":"Toriyama", 
 "animeGenre":"Fantasy", 
-"animesYear":"1984",
+"animeYear":"1984",
 "watched":"Yes",
 "opinion":"Anime worhty to wath again"
 }
