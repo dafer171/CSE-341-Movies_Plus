@@ -82,36 +82,77 @@ DELETE https://web-service-cse-341-movies-plus.onrender.com/movies/632f52e8ff1d3
 GET https://web-service-cse-341-movies-plus.onrender.com/users
 
 ### Get users by ID
-GET https://web-service-cse-341-movies-plus.onrender.com/movies/633487e1bbb0af0db7454cb4
+GET https://web-service-cse-341-movies-plus.onrender.com/users/633487e1bbb0af0db7454cb4
 ### 
-GET https://web-service-cse-341-movies-plus.onrender.com/movies/633487e1bbb0af0db7454cb5
+GET https://web-service-cse-341-movies-plus.onrender.com/users/633487e1bbb0af0db7454cb5
 ### 
-GET https://web-service-cse-341-movies-plus.onrender.com/movies/633487e1bbb0af0db7454cb6
+GET https://web-service-cse-341-movies-plus.onrender.com/users/633487e1bbb0af0db7454cb6
 
 ### Create user
 POST https://web-service-cse-341-movies-plus.onrender.com/users HTTP/1.1
 content-type: application/json
 
 {
-"nickname":"Saving Private Ryan", 
-"nickname":"Steven", 
+"nickname":"Ryan", 
+"userName":"Steven", 
 "userLastName":"Spielberg", 
 "movieGenre":"War", 
 "password":"1998"
 }
 
-### PUT movies
+### PUT users
 PUT https://web-service-cse-341-movies-plus.onrender.com/users/632cb07ae4c970f823ee6f5f HTTP/1.1
 content-type: application/json
 
 {
-"nickname":"Saving Private Ryan", 
-"nickname":"Steven", 
-"userLastName":"Spielberg", 
-"movieGenre":"War", 
-"password":"1998"
+"nickname":"Troy", 
+"userName":"Wolfgang", 
+"userLastName":"Petersen", 
+"password":"LEpic"
 }
 
-### DELETE movies
-DELETE https://web-service-cse-341-movies-plus.onrender.com/users/632f52e8ff1d3c65c218cccb HTTP/1.1
+### DELETE user
+DELETE https://web-service-cse-341-movies-plus.onrender.com/users/6341f01949cdf251bbe5267a HTTP/1.1
+
+
+### Get all the series
+GET https://web-service-cse-341-movies-plus.onrender.com/series
+
+### Get series by ID
+GET https://web-service-cse-341-movies-plus.onrender.com/series/633487e1bbb0af0db7454cb4
+### 
+GET https://web-service-cse-341-movies-plus.onrender.com/series/633487e1bbb0af0db7454cb5
+### 
+GET https://web-service-cse-341-movies-plus.onrender.com/series/633487e1bbb0af0db7454cb6
+
+### Create serie
+POST https://web-service-cse-341-movies-plus.onrender.com/series HTTP/1.1
+content-type: application/json
+
+{
+"serieTitle":"Vikings", 
+"serieAuhorName":"Michael", 
+"serieAuhorLastName":"Hirst", 
+"serieGenre":"historic Drama", 
+"serieYear":"2013",
+"watched":"Yes",
+"opinion":"Serie worhty to wath again"
+}
+
+### PUT series
+PUT https://web-service-cse-341-movies-plus.onrender.com/series/632cb07ae4c970f823ee6f5f HTTP/1.1
+content-type: application/json
+
+{
+"serieTitle":"Vikings", 
+"serieAuhorName":"Michael", 
+"serieAuhorLastName":"Hirst", 
+"serieGenre":"historic Drama", 
+"serieYear":"2013",
+"watched":"No",
+"opinion":"Serie worhty to wath again"
+}
+
+### DELETE 
+DELETE https://web-service-cse-341-movies-plus.onrender.com/series/6341f15049cdf251bbe5267b HTTP/1.1
 
