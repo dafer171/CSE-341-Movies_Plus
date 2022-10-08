@@ -87,7 +87,7 @@ const updateSerie = async (req, res) => {
       .getDb()
       .db()
       .collection('series')
-      .replaceOne({ _id: seriessId }, serie);
+      .replaceOne({ _id: seriesId }, serie);
     console.log(response);
     if (response.modifiedCount > 0) {
       res.status(204).send();
